@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="message-box">
+            <p class="message">Helloooo, sending this cause I can't meet you at Valentine :(</p>
+            <p class="question">Will you go on a date on 22 Feb tho?</p>
+            <div class="heart">❤️</div>
+            <div class="buttons">
+                <button id="yesBtn">YES</button>
+                <a href="#" id="noBtn">no? :(</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            document.body.classList.add("love-mode");
+            alert("Yay! See you on Feb 22! ❤️");
+        });
+
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            this.style.position = "absolute";
+            this.style.left = Math.random() * window.innerWidth + "px";
+            this.style.top = Math.random() * window.innerHeight + "px";
+        });
+
+        document.getElementById("noBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            alert("Aww, you can't say no! 😜");
+        });
+    </script>
+</body>
+</html>
